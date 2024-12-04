@@ -28,7 +28,7 @@
 SELECT CONCAT(ROUND((SUM(index_length))*100/(SUM(data_length+index_length)),2),'%') 
 FROM information_schema.TABLES where TABLE_SCHEMA = 'sakila';
 ```
-![ind_1]()
+![ind_1](https://github.com/Toazter426/ind-hw/blob/main/img/ind_1.png)
 ### Задание 2
 
 Выполните explain analyze следующего запроса:
@@ -53,7 +53,7 @@ JOIN inventory i ON r.inventory_id = i.inventory_id
 JOIN film f ON i.film_id = f.film_id
 WHERE payment_date >= '2005-07-30' and payment_date < DATE_ADD('2005-07-30', INTERVAL 1 DAY) ;
 ```
-![ind_2]()
+![ind_2](https://github.com/Toazter426/ind-hw/blob/main/img/ind_2.png)
 ## Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
 
