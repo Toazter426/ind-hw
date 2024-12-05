@@ -59,7 +59,7 @@ WHERE payment_date >= '2005-07-30' and payment_date < DATE_ADD('2005-07-30', INT
 ```
 ![ind_2](https://github.com/Toazter426/ind-hw/blob/main/img/ind_2.png)
 Результат с наличием индекса date_ind:
-![ind_2](https://github.com/Toazter426/ind-hw/blob/main/img/ind 2_4.png)
+![ind_2_4](https://github.com/Toazter426/ind-hw/blob/main/img/ind_2_4.png)
 ## Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
 
