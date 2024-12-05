@@ -41,6 +41,10 @@ where date(p.payment_date) = '2005-07-30' and p.payment_date = r.rental_date and
 - оптимизируйте запрос: внесите корректировки по использованию операторов, при необходимости добавьте индексы.
 #### Ответ
 В данном запросе неоднократно обрабатываются таблицы inventory, rental и film, что необязаетльно за наличием требуемых данных в таблицах payment, customer.
+был добавлен индекс для payment_date при помощи команды:
+```
+CREATE INDEX date_ind ON payment(payment_date);
+```
 Оптимизированная версия:
 ``` 
 explain analyze
@@ -54,6 +58,8 @@ JOIN film f ON i.film_id = f.film_id
 WHERE payment_date >= '2005-07-30' and payment_date < DATE_ADD('2005-07-30', INTERVAL 1 DAY) ;
 ```
 ![ind_2](https://github.com/Toazter426/ind-hw/blob/main/img/ind_2.png)
+Результат с наличием индекса date_ind:
+![ind_2](https://github.com/Toazter426/ind-hw/blob/main/img/ind 2_4.png)
 ## Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
 
